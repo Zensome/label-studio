@@ -54,6 +54,15 @@ export default {
     onChangeEvent: "toggleSelectAfterCreate",
     defaultValue: false,
   },
+  enableReverseZoomScrollDirection: {
+    newUI: {
+      title: "Reverse zoom scroll direction",
+      description: "When enabled, ctrl + scroll up zooms in and scroll down zooms out"
+    },
+    description: "Use standard zoom direction (scroll up to zoom in)",
+    onChangeEvent: "toggleReverseZoomScrollDirection",
+    defaultValue: true,
+  },
   showLineNumbers: {
     newUI: {
       tags: "Text Tag",

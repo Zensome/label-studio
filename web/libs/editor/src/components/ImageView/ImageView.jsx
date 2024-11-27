@@ -772,10 +772,11 @@ export default observer(
         e.evt.preventDefault();
       }
       if (e.evt) {
-        const { item } = this.props;
+        const { item, store } = this.props;
         const stage = item.stageRef;
-
-        item.handleZoom(e.evt.deltaY, stage.getPointerPosition());
+        const isReverseScroll = store.settings.reverseZoomScrollDirection;
+        const delta = e.evt.deltaY * (isReverseScroll ? -1 : 1);
+        item.handleZoom(delta, stage.getPointerPosition());
       }
     };
 

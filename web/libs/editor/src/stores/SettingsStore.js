@@ -32,6 +32,11 @@ const SettingsModel = types
      */
     continuousLabeling: false,
 
+    /**
+     * Scroll zoom direction
+     */
+    reverseZoomScrollDirection: types.optional(types.boolean, true),
+
     // select regions after creating them
     selectAfterCreate: false,
 
@@ -135,6 +140,10 @@ const SettingsModel = types
       //   // TODO there is no showLables in the regions right now
       //   return typeof r.showLabels === "boolean" && r.setShowLables(self.showLabels);
       // });
+    },
+
+    toggleReverseZoomScrollDirection() {
+      self.reverseZoomScrollDirection = !self.reverseZoomScrollDirection;
     },
 
     toggleShowLineNumbers() {

@@ -5999,6 +5999,7 @@ const store = {
     imageFullSize: false,
     enableAutoSave: false,
     showLabels: true,
+    reverseZoomScrollDirection: true,
     showLineNumbers: false,
     showAnnotationsPanel: true,
     showPredictionsPanel: true,
